@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hera’s Glam Makeup Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  padding: 40px 20px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.call { background: #28a745; }
+.whatsapp { background: #25D366; }
+.instagram { background: #C13584; }
+.facebook { background: #1877F2; }
+
+section {
+  padding: 30px 15px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 0;
+}
+
+footer {
+  padding: 20px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Hera’s Glam Makeup Studio</h1>
+  <p>Ladies Beauty Parlour</p>
+
+  <div class="buttons">
+    <a class="call" href="tel:+919747699196">📞 Call</a>
+    <a class="whatsapp" href="https://wa.me/918921225353">💬 WhatsApp</a>
+    <a class="instagram" href="https://www.instagram.com/heras_glam">📸 Instagram</a>
+    <a class="facebook" href="https://www.facebook.com/">📘 Facebook</a>
+  </div>
+</header>
+
+<section>
+  <h2>UK Certified Professional Stylist & Cosmetologist</h2>
+  <p>Kurissumoodu, Changanacherry</p>
+</section>
+
+<section>
+  <h3>Find Us</h3>
+  <iframe 
+    src="https://www.google.com/maps?q=Kurissumoodu%20Changanacherry&output=embed">
+  </iframe>
+</section>
+
+<footer>
+  <p>📞 +91 97476 99196 | +91 99616 99196</p>
+  <p>📧 herasglam@gmail.com</p>
+</footer>
+
+</body>
+</html>
