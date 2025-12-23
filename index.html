@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hera's Glam Makeup Studio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Hera’s Glam Makeup Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+}
+header{
+    padding:30px 15px;
+}
+h1{
+    margin:10px 0 5px;
+    font-size:28px;
+}
+p{
+    margin:6px 0;
+    font-size:15px;
+}
+.buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:12px 18px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:5px;
+    font-size:14px;
+}
+.call{background:#28a745;}
+.whatsapp{background:#25D366;}
+.facebook{background:#1877F2;}
+
+section{
+    padding:25px 15px;
+}
+iframe{
+    width:100%;
+    max-width:600px;
+    height:300px;
+    border:0;
+}
+footer{
+    padding:20px;
+    font-size:13px;
+    color:#555;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- TOP BANNER -->
-  <header class="hero">
-    <div class="hero-overlay">
-      <h1>Hera's Glam</h1>
-      <p>Makeup Studio & Ladies Beauty Parlour</p>
+<header>
+    <h1>Hera’s Glam Makeup Studio</h1>
+    <p>Makeup Studio & Ladies Beauty Parlour</p>
 
-      <div class="hero-buttons">
-        <a href="tel:+919747699196">📞 Call Now</a>
-        <a href="https://wa.me/918921225353" target="_blank">💬 WhatsApp</a>
-      </div>
+    <div class="buttons">
+        <a class="call" href="tel:+919747699196">📞 Call</a>
+        <a class="whatsapp" href="https://wa.me/919747699196" target="_blank">💬 WhatsApp</a>
+        <a class="facebook" href="https://www.facebook.com/" target="_blank">📘 Facebook</a>
     </div>
-  </header>
+</header>
 
-  <!-- CONTENT -->
-  <section class="info">
-    <h2>UK Certified Professional Stylist & Cosmetologist</h2>
+<section>
+    <h2>Professional Stylist</h2>
+    <p>UK Certified Professional Stylist & Cosmetologist</p>
     <p>Kurissumoodu, Changanacherry</p>
+</section>
+
+<section>
+    <h2>Find Us</h2>
+    <iframe 
+      src="https://www.google.com/maps?q=Kurissumoodu,Changanacherry&output=embed">
+    </iframe>
+</section>
+
+<footer>
     <p>📞 +91 97476 99196 | +91 99616 99196</p>
-    <p>📧 herasglam@gmail.com</p>
-  </section>
+    <p>✉️ herasglam@gmail.com</p>
+</footer>
 
 </body>
 </html>
