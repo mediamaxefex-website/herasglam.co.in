@@ -16,7 +16,7 @@
         :root {
             --bg-color: #050505;
             --card-bg: #111111;
-            --gold-main: #D4AF37;
+            --gold-main: #FFD700;      /* Updated to a brighter Gold/Yellow */
             --gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7);
             --text-white: #ffffff;
             --text-grey: #bbbbbb;
@@ -43,19 +43,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
         .logo-img {
-            height: 85px;
+            height: 90px;
             width: auto;
-            filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5));
+            /* THIS FILTER MAKES THE LOGO GOLD/YELLOW AUTOMATICALLY */
+            filter: brightness(0) saturate(100%) invert(78%) sepia(85%) saturate(1200%) hue-rotate(0deg) brightness(103%) contrast(101%);
         }
 
         .brand-text {
-            text-align: left;
+            /* Centers the subtitle under the main name */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
@@ -64,17 +69,19 @@
             font-size: 2.2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            /* Gold Gradient Text */
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 4px;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
             color: #ddd;
             display: block;
             margin-top: 5px;
+            text-transform: uppercase;
         }
 
         /* --- INFO BADGES --- */
@@ -168,16 +175,6 @@
             font-size: 0.85rem;
         }
         
-        footer a {
-            color: #888;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--gold-main);
-        }
-
         .max-efex {
             color: var(--gold-main);
             font-weight: bold;
@@ -187,11 +184,10 @@
         @media (max-width: 400px) {
             .brand-container {
                 flex-direction: row; 
-                text-align: left;
             }
             .logo-img { height: 60px; }
             h1 { font-size: 1.6rem; }
-            .subtitle { font-size: 0.7rem; }
+            .subtitle { font-size: 0.6rem; letter-spacing: 2px; }
         }
     </style>
 </head>
@@ -222,17 +218,17 @@
         
         <a href="https://wa.me/918921225353" class="link-btn btn-whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp icon" style="color:#25D366;"></i>
-            Chat on WhatsApp (+91 89212 25353)
+            Chat on WhatsApp
         </a>
 
         <a href="tel:+919747699196" class="link-btn btn-call">
             <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
-            Call: +91 97476 99196
+            Call: +919747699196
         </a>
 
         <a href="tel:+919961699196" class="link-btn btn-call">
             <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
-            Call: +91 99616 99196
+            Call: +919961699196
         </a>
 
         <a href="https://www.instagram.com/herasglam" class="link-btn btn-social" target="_blank">
@@ -253,10 +249,6 @@
     </div>
 
     <footer>
-        <p style="margin-bottom: 15px;">
-            <a href="mailto:herasglam@gmail.com">✉️ herasglam@gmail.com</a>
-        </p>
-        <hr style="border-color:#333; width: 50px; margin: 20px auto;">
         <p>Heras glam 2026 Powered By <span class="max-efex">MAX EFEX</span></p>
     </footer>
 
