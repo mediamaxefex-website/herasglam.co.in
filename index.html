@@ -51,7 +51,6 @@
         .logo-img {
             height: 85px;
             width: auto;
-            /* Adds a subtle gold glow to the logo */
             filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5));
         }
 
@@ -65,7 +64,6 @@
             font-size: 2.2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            /* Gold Gradient Text */
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -91,18 +89,14 @@
             font-family: 'Cinzel', serif;
         }
 
-        .tagline {
-            font-style: italic;
-            color: var(--text-grey);
-            margin-bottom: 20px;
-        }
-
         .location-link {
             color: var(--text-white);
             text-decoration: none;
             border-bottom: 1px dotted var(--gold-main);
             font-size: 0.95rem;
             transition: color 0.3s;
+            margin-top: 10px;
+            display: inline-block;
         }
         
         .location-link:hover {
@@ -144,7 +138,7 @@
             font-size: 1.2rem;
         }
 
-        /* specific colors for buttons */
+        /* Specific Button Styles */
         .btn-whatsapp {
             background: linear-gradient(to right, #0f2e1c, #111);
             border-left: 4px solid #25D366;
@@ -160,6 +154,11 @@
             border-left: 4px solid #fff;
         }
 
+        .btn-email {
+            background: #151515;
+            border-left: 4px solid #EA4335;
+        }
+
         /* --- FOOTER --- */
         footer {
             margin-top: 50px;
@@ -167,6 +166,16 @@
             border-top: 1px solid #222;
             color: #666;
             font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--gold-main);
         }
 
         .max-efex {
@@ -199,8 +208,7 @@
 
         <div class="badge">UK Certified Professional Stylist</div>
         
-        <p>Ladies Beauty Parlour & Cosmetology Center</p>
-        <p class="tagline">"All Works are here"</p>
+        <p style="color: #bbb;">Ladies Beauty Parlour & Cosmetology Center</p>
         
         <div>
             <i class="fa-solid fa-location-dot" style="color:var(--gold-main)"></i>
@@ -236,11 +244,18 @@
             <i class="fa-brands fa-facebook-f icon" style="color: #1877F2;"></i>
             Facebook: Hera's Glam
         </a>
+        
+        <a href="mailto:herasglam@gmail.com" class="link-btn btn-email">
+            <i class="fa-solid fa-envelope icon" style="color: #EA4335;"></i>
+            Email Us
+        </a>
 
     </div>
 
     <footer>
-        <p style="margin-bottom: 15px;">✉️ herasglam@gmail.com</p>
+        <p style="margin-bottom: 15px;">
+            <a href="mailto:herasglam@gmail.com">✉️ herasglam@gmail.com</a>
+        </p>
         <hr style="border-color:#333; width: 50px; margin: 20px auto;">
         <p>Heras glam 2026 Powered By <span class="max-efex">MAX EFEX</span></p>
     </footer>
