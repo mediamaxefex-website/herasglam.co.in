@@ -51,11 +51,10 @@
         .logo-img {
             height: 90px;
             width: auto;
-            /* FILTER REMOVED: Now shows your logo exactly as it is */
+            /* No Filter - Keeps original Gold Logo */
         }
 
         .brand-text {
-            /* Centers the subtitle under the main name */
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -68,7 +67,6 @@
             font-size: 2.2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            /* Gold Gradient Text */
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -119,6 +117,7 @@
             gap: 15px;
         }
 
+        /* Updated Button Style to Force White Text */
         .link-btn {
             display: flex;
             align-items: center;
@@ -126,12 +125,17 @@
             gap: 12px;
             padding: 16px;
             background: var(--card-bg);
-            color: white;
+            color: #ffffff !important; /* Forces text to be white */
             text-decoration: none;
             font-weight: bold;
             border: 1px solid #333;
             border-radius: 8px;
             transition: transform 0.2s, border-color 0.2s;
+        }
+
+        /* Ensures visited links don't turn blue */
+        .link-btn:visited, .link-btn:active, .link-btn:hover {
+            color: #ffffff !important;
         }
 
         .link-btn:hover {
@@ -222,12 +226,12 @@
 
         <a href="tel:+919747699196" class="link-btn btn-call">
             <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
-            Call: +919747699196
+            Call: +91 97476 99196
         </a>
 
         <a href="tel:+919961699196" class="link-btn btn-call">
             <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
-            Call: +919961699196
+            Call: +91 99616 99196
         </a>
 
         <a href="https://www.instagram.com/herasglam" class="link-btn btn-social" target="_blank">
@@ -235,7 +239,7 @@
             Instagram: Heras Glam
         </a>
 
-        <a href="https://www.facebook.com/share/1HyPUsKWyT/ class="link-btn btn-social" target="_blank">
+        <a href="https://www.facebook.com/share/1DLhDHADzj/" class="link-btn btn-social" target="_blank">
             <i class="fa-brands fa-facebook-f icon" style="color: #1877F2;"></i>
             Facebook: Hera's Glam
         </a>
@@ -252,5 +256,4 @@
     </footer>
 
 </body>
-
 </html>
