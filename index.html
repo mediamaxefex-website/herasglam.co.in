@@ -1,238 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hera’s Glam Makeup Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    /* --- GOLD & BLACK THEME --- */
-    :root {
-      --bg-color: #0a0a0a;       /* Deep Luxury Black */
-      --card-bg: #151515;        /* Slightly lighter black for cards */
-      --gold-main: #D4AF37;      /* Classic Gold */
-      --gold-light: #F8E79B;     /* Light Gold for gradients */
-      --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
-      --text-color: #f0f0f0;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      text-align: center;
-    }
-
-    /* --- HEADER --- */
-    header {
-      padding: 30px 15px;
-      border-bottom: 1px solid #333;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-    }
-
-    /* Flex container to put Logo Left and Name Right */
-    .brand-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-      flex-wrap: wrap; /* Wraps on very small screens */
-    }
-
-    .logo-img {
-      height: 80px;
-      width: auto;
-      /* Optional: If your png is black, this makes it white/gold. 
-         Remove filter if your logo is already gold/colored */
-      filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(5deg);
-    }
-
-    .title-block {
-      text-align: left;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: 'Cinzel', serif;
-      font-size: 32px;
-      color: var(--gold-main);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      letter-spacing: 3px;
-      color: #ccc;
-      display: block;
-      margin-top: 5px;
-    }
-
-    /* --- BADGE & INFO --- */
-    .certification-badge {
-      display: inline-block;
-      background: #222;
-      color: var(--gold-main);
-      padding: 8px 15px;
-      border: 1px solid var(--gold-main);
-      border-radius: 4px;
-      font-size: 14px;
-      margin: 15px 0;
-      font-family: 'Cinzel', serif;
-    }
-
-    .tagline {
-      font-style: italic;
-      color: #888;
-      margin-bottom: 5px;
-    }
-
-    .location {
-      font-weight: bold;
-      color: #fff;
-    }
-
-    /* --- BUTTONS --- */
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-top: 30px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      transition: transform 0.2s;
-      border: 1px solid var(--gold-main);
-    }
-
-    .btn:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-    }
-
-    /* Button Colors adjusted for Dark Theme */
-    .whatsapp { 
-      background: linear-gradient(to right, #25D366, #128C7E); 
-      color: white; 
-      border: none;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hera's Glam Makeup Studio</title>
     
-    .call { 
-      background: transparent; 
-      color: var(--gold-main); 
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    .social-btn {
-      background: #111;
-      color: #fff;
-      border: 1px solid #333;
-    }
+    <style>
+        /* --- GOLD & BLACK THEME SETTINGS --- */
+        :root {
+            --bg-color: #050505;
+            --card-bg: #111111;
+            --gold-main: #D4AF37;
+            --gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+            --text-white: #ffffff;
+            --text-grey: #bbbbbb;
+        }
 
-    /* --- FOOTER --- */
-    footer {
-      margin-top: 50px;
-      padding: 30px;
-      font-size: 14px;
-      border-top: 1px solid #333;
-      color: #666;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-    .max-efex {
-      color: var(--gold-main);
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+        /* --- HEADER --- */
+        header {
+            padding: 40px 20px 20px;
+            background: radial-gradient(circle at top, #1a1a1a, #000);
+            border-bottom: 1px solid #222;
+        }
 
-    /* Mobile adjustments */
-    @media (max-width: 480px) {
-      .brand-container {
-        flex-direction: row; /* Keep side by side on mobile if possible */
-      }
-      .logo-img {
-        height: 60px;
-      }
-      h1 {
-        font-size: 24px;
-      }
-    }
-  </style>
+        /* Logo Left, Text Right Layout */
+        .brand-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            height: 85px;
+            width: auto;
+            /* Adds a subtle gold glow to the logo */
+            filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5));
+        }
+
+        .brand-text {
+            text-align: left;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Gold Gradient Text */
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #ddd;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* --- INFO BADGES --- */
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--gold-main);
+            color: var(--gold-main);
+            padding: 6px 15px;
+            font-size: 0.85rem;
+            border-radius: 50px;
+            margin: 15px 0;
+            font-family: 'Cinzel', serif;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: var(--text-grey);
+            margin-bottom: 20px;
+        }
+
+        .location-link {
+            color: var(--text-white);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--gold-main);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .location-link:hover {
+            color: var(--gold-main);
+        }
+
+        /* --- LINKS SECTION --- */
+        .links-wrapper {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--card-bg);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #333;
+            border-radius: 8px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold-main);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+        }
+
+        /* specific colors for buttons */
+        .btn-whatsapp {
+            background: linear-gradient(to right, #0f2e1c, #111);
+            border-left: 4px solid #25D366;
+        }
+
+        .btn-call {
+            background: linear-gradient(to right, #2e260f, #111);
+            border-left: 4px solid var(--gold-main);
+        }
+
+        .btn-social {
+            background: #151515;
+            border-left: 4px solid #fff;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .max-efex {
+            color: var(--gold-main);
+            font-weight: bold;
+        }
+
+        /* Mobile Fixes */
+        @media (max-width: 400px) {
+            .brand-container {
+                flex-direction: row; 
+                text-align: left;
+            }
+            .logo-img { height: 60px; }
+            h1 { font-size: 1.6rem; }
+            .subtitle { font-size: 0.7rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <div class="brand-container">
-    <img src="heraslogo.png" alt="Hera's Glam Logo" class="logo-img">
-    <div class="title-block">
-      <h1>Hera’s Glam</h1>
-      <span class="subtitle">MAKEUP STUDIO</span>
+    <header>
+        <div class="brand-container">
+            <img src="heraslogo.png" alt="Hera's Glam Logo" class="logo-img">
+            <div class="brand-text">
+                <h1>Hera's Glam</h1>
+                <span class="subtitle">MAKEUP STUDIO</span>
+            </div>
+        </div>
+
+        <div class="badge">UK Certified Professional Stylist</div>
+        
+        <p>Ladies Beauty Parlour & Cosmetology Center</p>
+        <p class="tagline">"All Works are here"</p>
+        
+        <div>
+            <i class="fa-solid fa-location-dot" style="color:var(--gold-main)"></i>
+            <a href="https://maps.app.goo.gl/ByJPMGKyuHj6DYEd9" class="location-link" target="_blank">
+                Kurissumoodu, Changanacherry
+            </a>
+        </div>
+    </header>
+
+    <div class="links-wrapper">
+        
+        <a href="https://wa.me/918921225353" class="link-btn btn-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp icon" style="color:#25D366;"></i>
+            Chat on WhatsApp (+91 89212 25353)
+        </a>
+
+        <a href="tel:+919747699196" class="link-btn btn-call">
+            <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
+            Call: +91 97476 99196
+        </a>
+
+        <a href="tel:+919961699196" class="link-btn btn-call">
+            <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
+            Call: +91 99616 99196
+        </a>
+
+        <a href="https://www.instagram.com/herasglam" class="link-btn btn-social" target="_blank">
+            <i class="fa-brands fa-instagram icon" style="color: #E1306C;"></i>
+            Instagram: Heras Glam
+        </a>
+
+        <a href="https://www.facebook.com/share/1DLhDHADzj/" class="link-btn btn-social" target="_blank">
+            <i class="fa-brands fa-facebook-f icon" style="color: #1877F2;"></i>
+            Facebook: Hera's Glam
+        </a>
+
     </div>
-  </div>
 
-  <div class="certification-badge">UK Certified Professional Stylist</div>
-  
-  <p>Ladies Beauty Parlour & Cosmetology Center</p>
-  <p class="tagline">"All Works are here"</p>
-  
-  <div style="margin-top: 20px;">
-    <p class="location"><i class="fa-solid fa-location-dot" style="color:var(--gold-main)"></i> Kurissumoodu, Changanacherry</p>
-    <a href="https://maps.google.com" style="color: #888; font-size: 12px; text-decoration: none;">Open in Google Maps</a>
-  </div>
-</header>
-
-<section class="buttons">
-  <a class="btn whatsapp" href="https://wa.me/918921225353" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-  </a>
-
-  <a class="btn call" href="tel:+919747699196">
-    <i class="fa-solid fa-phone"></i> Call: +91 97476 99196
-  </a>
-  
-  <a class="btn call" href="tel:+919961699196">
-    <i class="fa-solid fa-phone"></i> Call: +91 99616 99196
-  </a>
-
-  <a class="btn social-btn" href="https://www.instagram.com/" target="_blank">
-    <i class="fa-brands fa-instagram" style="color: #E1306C;"></i> Instagram: Heras Glam
-  </a>
-
-  <a class="btn social-btn" href="https://www.facebook.com/" target="_blank">
-    <i class="fa-brands fa-facebook-f" style="color: #1877F2;"></i> Facebook: Hera's Glam
-  </a>
-</section>
-
-<footer>
-  <p style="margin-bottom: 10px;">✉️ herasglam@gmail.com</p>
-  <hr style="border-color: #333; width: 50px; margin: 20px auto;">
-  <p>Heras glam 2026 Powered By <span class="max-efex">MAX EFEX</span></p>
-</footer>
+    <footer>
+        <p style="margin-bottom: 15px;">✉️ herasglam@gmail.com</p>
+        <hr style="border-color:#333; width: 50px; margin: 20px auto;">
+        <p>Heras glam 2026 Powered By <span class="max-efex">MAX EFEX</span></p>
+    </footer>
 
 </body>
 </html>
