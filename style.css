@@ -1,63 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+/* 1. Global Theme Updates */
+body {
+    background-color: #000; /* Black background */
+    color: #ffffff; /* White text */
 }
 
-.hero {
-  height: 85vh;
-  background: url("banner.jpg") center/cover no-repeat;
-  position: relative;
+/* 2. Header & Logo Section */
+header, .navbar { 
+    background-color: #000 !important; /* Forces header to black */
+    border-bottom: 1px solid #d4af37; /* Optional gold accent line */
 }
 
-.hero-overlay {
-  background: rgba(0,0,0,0.55);
-  height: 100%;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+/* 3. Mobile Hero Fix (Removing Overlap) */
+@media screen and (max-width: 768px) {
+    /* Container for the hero section */
+    .hero-section {
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    /* The Hero Image */
+    .hero-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Moving the "Where Beauty Blooms" box below the image */
+    .hero-text-box {
+        position: relative !important; /* Removes the absolute overlap */
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        background-color: #000 !important; /* Black background for text */
+        padding: 40px 20px;
+        text-align: center;
+    }
 }
 
-.hero h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
+/* 4. Gold Accents for Text and Buttons */
+h1, h2, .gold-text {
+    color: #d4af37; /* Classic Gold color */
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin: 15px 0;
+.call-now-btn {
+    background-color: #d4af37 !important; /* Gold button */
+    color: #000 !important; /* Black text on gold button */
+    border: none;
+    font-weight: bold;
 }
 
-.hero-buttons {
-  margin-top: 20px;
-}
-
-.hero-buttons a {
-  text-decoration: none;
-  background: #d4af37;
-  color: #000;
-  padding: 12px 22px;
-  margin: 8px;
-  border-radius: 30px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.hero-buttons a:hover {
-  background: #fff;
-}
-
-.info {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.info h2 {
-  color: #b8860b;
-  margin-bottom: 10px;
+/* 5. Marquee/Ticker Styling */
+.ticker-wrap {
+    background-color: #d4af37; /* Change brown bar to gold */
+    color: #000; /* Black text for contrast */
 }
