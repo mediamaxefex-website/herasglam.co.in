@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hera's Glam Makeup Studio</title>
-
-    <meta name="description" content="Hera's Glam Makeup Studio in Changanacherry. UK Certified Professional Stylist. Ladies Beauty Parlour & Cosmetology Center. Call: +91 89212 25353 or +91 99616 99196.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +38,6 @@
             border-bottom: 1px solid #222;
         }
 
-        /* Logo Left, Text Right Layout */
         .brand-container {
             display: flex;
             align-items: center;
@@ -53,7 +50,6 @@
         .logo-img {
             height: 90px;
             width: auto;
-            /* No Filter - Keeps original Gold Logo */
         }
 
         .brand-text {
@@ -83,7 +79,6 @@
             text-transform: uppercase;
         }
 
-        /* --- INFO BADGES --- */
         .badge {
             display: inline-block;
             border: 1px solid var(--gold-main);
@@ -119,7 +114,6 @@
             gap: 15px;
         }
 
-        /* Updated Button Style to Force White Text */
         .link-btn {
             display: flex;
             align-items: center;
@@ -127,17 +121,12 @@
             gap: 12px;
             padding: 16px;
             background: var(--card-bg);
-            color: #ffffff !important; /* Forces text to be white */
+            color: white;
             text-decoration: none;
             font-weight: bold;
             border: 1px solid #333;
             border-radius: 8px;
             transition: transform 0.2s, border-color 0.2s;
-        }
-
-        /* Ensures visited links don't turn blue */
-        .link-btn:visited, .link-btn:active, .link-btn:hover {
-            color: #ffffff !important;
         }
 
         .link-btn:hover {
@@ -146,29 +135,96 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        .icon {
-            font-size: 1.2rem;
+        .icon { font-size: 1.2rem; }
+
+        /* Button Colors */
+        .btn-whatsapp { background: linear-gradient(to right, #0f2e1c, #111); border-left: 4px solid #25D366; }
+        .icon-whatsapp { color: #25D366; }
+
+        .btn-call { background: linear-gradient(to right, #2e260f, #111); border-left: 4px solid var(--gold-main); }
+        .icon-call { color: var(--gold-main); }
+
+        .btn-social { background: #151515; border-left: 4px solid #fff; }
+        .icon-insta { color: #E1306C; }
+        .icon-fb { color: #1877F2; }
+
+        .btn-email { background: #151515; border-left: 4px solid #EA4335; }
+        .icon-email { color: #EA4335; }
+
+
+        /* --- SECTION TITLES --- */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-main);
+            margin: 40px 0 20px;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 2px;
+            background: var(--gold-main);
+            margin: 5px auto 0;
         }
 
-        /* Specific Button Styles */
-        .btn-whatsapp {
-            background: linear-gradient(to right, #0f2e1c, #111);
-            border-left: 4px solid #25D366;
+        /* --- IMAGE STACK (VERTICAL) --- */
+        .image-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; /* Space between photos */
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .btn-call {
-            background: linear-gradient(to right, #2e260f, #111);
-            border-left: 4px solid var(--gold-main);
+        .service-card {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
         }
 
-        .btn-social {
-            background: #151515;
-            border-left: 4px solid #fff;
+        .service-card:hover {
+            border-color: var(--gold-main);
         }
 
-        .btn-email {
-            background: #151515;
-            border-left: 4px solid #EA4335;
+        .service-img {
+            width: 100%;
+            height: auto; /* FULL SIZE: No cropping */
+            display: block;
+            border-bottom: 1px solid #222;
+        }
+
+        .service-name {
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ddd;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- MAP SECTION --- */
+        .map-wrapper {
+            max-width: 500px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            border: 1px solid var(--gold-main);
+            /* Dark Mode Filter for Map */
+            filter: invert(90%) hue-rotate(180deg) brightness(0.9);
         }
 
         /* --- FOOTER --- */
@@ -180,16 +236,10 @@
             font-size: 0.85rem;
         }
         
-        .max-efex {
-            color: var(--gold-main);
-            font-weight: bold;
-        }
+        .max-efex { color: var(--gold-main); font-weight: bold; }
 
-        /* Mobile Fixes */
         @media (max-width: 400px) {
-            .brand-container {
-                flex-direction: row; 
-            }
+            .brand-container { flex-direction: row; }
             .logo-img { height: 60px; }
             h1 { font-size: 1.6rem; }
             .subtitle { font-size: 0.6rem; letter-spacing: 2px; }
@@ -213,7 +263,7 @@
         
         <div>
             <i class="fa-solid fa-location-dot" style="color:var(--gold-main)"></i>
-            <a href="https://maps.app.goo.gl/ByJPMGKyuHj6DYEd9" class="location-link" target="_blank">
+            <a href="https://maps.google.com/maps?q=Hera's+Glam+Makeup+Studio+Kurissumoodu+Changanacherry" class="location-link" target="_blank">
                 Kurissumoodu, Changanacherry
             </a>
         </div>
@@ -222,35 +272,86 @@
     <div class="links-wrapper">
         
         <a href="https://wa.me/918921225353" class="link-btn btn-whatsapp" target="_blank">
-            <i class="fa-brands fa-whatsapp icon" style="color:#25D366;"></i>
+            <i class="fa-brands fa-whatsapp icon icon-whatsapp"></i>
             Chat on WhatsApp
         </a>
 
-        <a href="tel:+918921225353" class="link-btn btn-call">
-            <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
-            Call: +91 89212 25353
+        <a href="tel:+919747699196" class="link-btn btn-call">
+            <i class="fa-solid fa-phone icon icon-call"></i>
+            Call: +919747699196
         </a>
 
         <a href="tel:+919961699196" class="link-btn btn-call">
-            <i class="fa-solid fa-phone icon" style="color:var(--gold-main);"></i>
-            Call: +91 99616 99196
+            <i class="fa-solid fa-phone icon icon-call"></i>
+            Call: +919961699196
         </a>
 
         <a href="https://www.instagram.com/herasglam" class="link-btn btn-social" target="_blank">
-            <i class="fa-brands fa-instagram icon" style="color: #E1306C;"></i>
+            <i class="fa-brands fa-instagram icon icon-insta"></i>
             Instagram: Heras Glam
         </a>
 
-        <a href="https://www.facebook.com/share/1HyPUsKWyT/" class="link-btn btn-social" target="_blank">
-            <i class="fa-brands fa-facebook-f icon" style="color: #1877F2;"></i>
+        <a href="https://www.facebook.com/share/1DLhDHADzj/" class="link-btn btn-social" target="_blank">
+            <i class="fa-brands fa-facebook-f icon icon-fb"></i>
             Facebook: Hera's Glam
         </a>
         
         <a href="mailto:herasglam@gmail.com" class="link-btn btn-email">
-            <i class="fa-solid fa-envelope icon" style="color: #EA4335;"></i>
+            <i class="fa-solid fa-envelope icon icon-email"></i>
             Email Us
         </a>
 
+    </div>
+
+    <h2 class="section-title">Bridal Makeup</h2>
+    <div class="image-stack">
+        <div class="service-card">
+            <img src="hg1.png" alt="Bridal Makeup 1" class="service-img" style="border-bottom:none;">
+        </div>
+        <div class="service-card">
+            <img src="hg2.png" alt="Bridal Makeup 2" class="service-img" style="border-bottom:none;">
+        </div>
+        <div class="service-card">
+            <img src="hg3.png" alt="Bridal Makeup 3" class="service-img" style="border-bottom:none;">
+        </div>
+    </div>
+
+    <h2 class="section-title">Our Services</h2>
+    <div class="image-stack">
+        <div class="service-card">
+            <img src="hydrafacial.png" alt="Hydra Facial" class="service-img">
+            <div class="service-name">Hydra Facial</div>
+        </div>
+        
+        <div class="service-card">
+            <img src="haircoloring.png" alt="Hair Coloring" class="service-img">
+            <div class="service-name">Hair Coloring</div>
+        </div>
+        
+        <div class="service-card">
+            <img src="hairsmoothening.png" alt="Hair Smoothening" class="service-img">
+            <div class="service-name">Hair Smoothening</div>
+        </div>
+
+        <div class="service-card">
+            <img src="eyebrow.png" alt="Eyebrow Styling" class="service-img">
+            <div class="service-name">Eyebrow Styling</div>
+        </div>
+
+        <div class="service-card">
+            <img src="pedicure.png" alt="Pedicure" class="service-img">
+            <div class="service-name">Pedicure</div>
+        </div>
+    </div>
+
+    <div class="map-wrapper">
+        <iframe 
+            class="map-frame"
+            src="https://maps.google.com/maps?q=Hera's+Glam+Makeup+Studio+Kurissumoodu+Changanacherry&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 
     <footer>
@@ -259,6 +360,3 @@
 
 </body>
 </html>
-
-
-
