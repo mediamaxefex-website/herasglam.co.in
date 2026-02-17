@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | HΣRΛ'S GLΛM</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --accent-blue: #006aff;
+            --deep-blue: #021B79;
+            --accent-gradient: radial-gradient(circle at top, #0575E6, #021B79);
+            --border-color: #eeeeee;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        header {
+            padding: 40px 20px 30px;
+            background: var(--accent-gradient);
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* --- NAVIGATION MENU --- */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--deep-blue);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-blue);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--deep-blue);
+            margin: 50px 0 25px;
+            font-size: 1.6rem;
+            border-bottom: 2.5px solid var(--accent-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* --- PRICE TABLE STYLING --- */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-table th {
+            background: var(--accent-blue);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Cinzel', serif;
+        }
+
+        .price-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .price-table tr:nth-child(even) {
+            background: #f9f9fb;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--accent-blue);
+            text-align: right;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 40px auto;
+            max-width: 320px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        footer {
+            padding: 50px;
+            background: #f8f9fa;
+            color: #888;
+            border-top: 1px solid #eee;
+        }
+
+        .max-efex {
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HΣRΛ'S GLΛM</h1>
+        <p style="margin-top: 10px;">Full Service Menu</p>
+    </header>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="services.html" class="nav-link">SERVICES</a>
+        <a href="gallery.html" class="nav-link">GALLERY</a>
+        <a href="index.html#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <div class="container">
+
+        <h2 class="section-title">Skin Care Facials</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th style="text-align:right">Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diamond Facial</td>
+                    <td class="price">2000</td>
+                </tr>
+                <tr>
+                    <td>Gold Facial / Skin Lightening</td>
+                    <td class="price">1800</td>
+                </tr>
+                <tr>
+                    <td>Pearl / Silver / Skin Whitening / Anti-tan</td>
+                    <td class="price">1600</td>
+                </tr>
+                <tr>
+                    <td>Aroma / De-pigmentation</td>
+                    <td class="price">1500</td>
+                </tr>
+                <tr>
+                    <td>De-hydration</td>
+                    <td class="price">1300</td>
+                </tr>
+                <tr>
+                    <td>Acne Facial</td>
+                    <td class="price">1200</td>
+                </tr>
+                <tr>
+                    <td>Fruit Facial</td>
+                    <td class="price">1100</td>
+                </tr>
+                <tr>
+                    <td>Veg Peel</td>
+                    <td class="price">1000</td>
+                </tr>
+                <tr>
+                    <td>Regular Facial</td>
+                    <td class="price">800+</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Premium & Hydra Spa</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Premium Service</th>
+                    <th style="text-align:right">Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hydra Spa Facial</td>
+                    <td class="price">4000</td>
+                </tr>
+                <tr>
+                    <td>Hydra Facial / Spa Cleanup</td>
+                    <td class="price">3000</td>
+                </tr>
+                <tr>
+                    <td>Shehnaz Diamond</td>
+                    <td class="price">2800</td>
+                </tr>
+                <tr>
+                    <td>Shehnaz Gold / O2 Facial / Spa Facial</td>
+                    <td class="price">2500</td>
+                </tr>
+                <tr>
+                    <td>Shehnaz Silver</td>
+                    <td class="price">2200</td>
+                </tr>
+                <tr>
+                    <td>Shehnaz Pearl</td>
+                    <td class="price">2000</td>
+                </tr>
+                <tr>
+                    <td>Shehnaz Fruit</td>
+                    <td class="price">1500</td>
+                </tr>
+                <tr>
+                    <td>Peeling / Mask (Add-on)</td>
+                    <td class="price">500</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Professional Waxing</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th style="text-align:right">Rica (₹)</th>
+                    <th style="text-align:right">Ordinary (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Full Body</td>
+                    <td class="price">3500</td>
+                    <td class="price">3000</td>
+                </tr>
+                <tr>
+                    <td>Full Leg</td>
+                    <td class="price">800</td>
+                    <td class="price">400</td>
+                </tr>
+                <tr>
+                    <td>Half Leg</td>
+                    <td class="price">400</td>
+                    <td class="price">200</td>
+                </tr>
+                <tr>
+                    <td>Full Hand</td>
+                    <td class="price">500</td>
+                    <td class="price">600</td>
+                </tr>
+                <tr>
+                    <td>Back</td>
+                    <td class="price">-</td>
+                    <td class="price">600</td>
+                </tr>
+                <tr>
+                    <td>Stomach</td>
+                    <td class="price">-</td>
+                    <td class="price">500</td>
+                </tr>
+                <tr>
+                    <td>Under Arm</td>
+                    <td class="price">-</td>
+                    <td class="price">250</td>
+                </tr>
+                <tr>
+                    <td>Upper Lip / Chin</td>
+                    <td class="price">150</td>
+                    <td class="price">-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Cleanup & Bleach</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th style="text-align:right">Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diamond Cleanup</td>
+                    <td class="price">700</td>
+                </tr>
+                <tr>
+                    <td>Aroma / Gold / Silver Cleanup</td>
+                    <td class="price">650</td>
+                </tr>
+                <tr>
+                    <td>Whitening Cleanup</td>
+                    <td class="price">600</td>
+                </tr>
+                <tr>
+                    <td>Ordinary Cleanup</td>
+                    <td class="price">500</td>
+                </tr>
+                <tr>
+                    <td>Aroma Bleach</td>
+                    <td class="price">400</td>
+                </tr>
+                <tr>
+                    <td>Oxi / Protein Bleach</td>
+                    <td class="price">350</td>
+                </tr>
+                <tr>
+                    <td>Tan Pack (Face) / Blouse Portion</td>
+                    <td class="price">300</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="https://wa.me/918921225353" class="btn-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Enquiry & Booking
+        </a>
+    </div>
+
+    <footer>
+        <p>HΣRΛ'S GLΛM 2026 | Powered By <span class="max-efex">MAX EFEX</span></p>
+    </footer>
+
+</body>
+
+</html>

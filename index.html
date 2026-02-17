@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HΣRΛ'S GLΛM | Makeup Studio & Cosmetology</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -16,7 +18,7 @@
         :root {
             --bg-color: #ffffff;
             --card-bg: #fcfcfc;
-            --accent-blue: #006aff; 
+            --accent-blue: #006aff;
             --deep-blue: #021B79;
             --accent-gradient: radial-gradient(circle at top, #0575E6, #021B79);
             --text-dark: #1a1a1a;
@@ -27,11 +29,22 @@
             background-color: var(--bg-color);
             color: var(--text-dark);
             font-family: 'Lato', sans-serif;
-            margin: 0; padding: 0; text-align: center;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
-        img { max-width: 100%; height: auto; display: block; }
-        .logo-img { height: 90px; width: auto; margin: 0 auto; }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .logo-img {
+            height: 90px;
+            width: auto;
+            margin: 0 auto;
+        }
 
         header {
             padding: 50px 20px 30px;
@@ -40,80 +53,260 @@
             color: white;
         }
 
-        .brand-container { display: flex; flex-direction: column; align-items: center; gap: 15px; }
-        h1 { margin: 0; font-family: 'Cinzel', serif; font-size: 2.4rem; text-transform: uppercase; letter-spacing: 3px; }
-        .subtitle { font-size: 0.9rem; letter-spacing: 5px; color: rgba(255, 255, 255, 0.9); text-transform: uppercase; }
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+        }
+
+        /* --- NAVIGATION MENU --- */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--deep-blue);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-blue);
+        }
 
         .badge {
-            display: inline-block; border: 1.5px solid #ffffff; color: #ffffff;
-            padding: 8px 22px; font-size: 0.8rem; border-radius: 50px;
-            margin: 20px 0; font-weight: bold; font-family: 'Cinzel', serif;
+            display: inline-block;
+            border: 1.5px solid #ffffff;
+            color: #ffffff;
+            padding: 8px 22px;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-family: 'Cinzel', serif;
         }
 
         .location-link {
-            color: #ffffff; text-decoration: none; border-bottom: 1px dotted #fff;
-            font-size: 0.95rem; margin-top: 10px; display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px dotted #fff;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            display: inline-block;
         }
 
         /* --- ACTION BUTTONS --- */
         .links-wrapper {
-            max-width: 500px; margin: 30px auto; padding: 0 20px;
-            display: flex; flex-direction: column; gap: 15px;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
         .link-btn {
-            display: flex; align-items: center; justify-content: center; gap: 12px;
-            padding: 16px; background: #fff; color: var(--text-dark);
-            text-decoration: none; font-weight: bold; border: 1px solid var(--border-color);
-            border-radius: 12px; transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: #fff;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.2s ease;
         }
 
-        .link-btn:hover { transform: translateY(-3px); border-color: var(--accent-blue); box-shadow: 0 5px 15px rgba(0,106,255,0.1); }
+        .link-btn:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 5px 15px rgba(0, 106, 255, 0.1);
+        }
 
-        .btn-whatsapp { border-left: 6px solid #25D366; }
-        .btn-call { border-left: 6px solid #FFD700; }
-        .btn-insta { border-left: 6px solid #E1306C; }
-        .btn-fb { border-left: 6px solid #1877F2; }
-        .btn-email { border-left: 6px solid #EA4335; }
+        .btn-whatsapp {
+            border-left: 6px solid #25D366;
+        }
 
-        .section-title { font-family: 'Cinzel', serif; color: var(--deep-blue); margin: 50px 0 25px; font-size: 1.6rem; }
-        .card { max-width: 500px; margin: 20px auto; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 1px solid #eee; text-align: left; }
+        .btn-call {
+            border-left: 6px solid #FFD700;
+        }
 
-        .image-stack { display: flex; flex-direction: column; align-items: center; gap: 25px; max-width: 500px; margin: 0 auto; padding: 0 20px; }
-        .service-card { width: 100%; background: white; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .service-name { padding: 18px; font-weight: bold; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 1px; }
+        .btn-insta {
+            border-left: 6px solid #E1306C;
+        }
 
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-size: 0.85rem; margin-bottom: 5px; color: #555; font-weight: 700; }
-        .form-input { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
-        .btn-quote { width: 100%; background: var(--accent-blue); color: white; border: none; padding: 16px; border-radius: 8px; font-weight: bold; text-transform: uppercase; cursor: pointer; font-size: 1rem; }
+        .btn-fb {
+            border-left: 6px solid #1877F2;
+        }
 
-        .map-frame { width: 100%; height: 320px; border-radius: 15px; border: 1px solid var(--accent-blue); }
-        footer { padding: 50px 20px; background: #f8f9fa; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
-        .max-efex { color: var(--accent-blue); font-weight: 800; }
+        .btn-email {
+            border-left: 6px solid #EA4335;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--deep-blue);
+            margin: 50px 0 25px;
+            font-size: 1.6rem;
+        }
+
+        .card {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 25px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+
+        .image-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            width: 100%;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .service-name {
+            padding: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 700;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .btn-quote {
+            width: 100%;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 320px;
+            border-radius: 15px;
+            border: 1px solid var(--accent-blue);
+        }
+
+        footer {
+            padding: 50px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .max-efex {
+            color: var(--accent-blue);
+            font-weight: 800;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
         <div class="brand-container">
             <img src="heraslogo.png" alt="Hera's Glam Logo" class="logo-img">
+
             <div class="brand-text">
                 <h1>HΣRΛ'S GLΛM</h1>
                 <span class="subtitle">MAKEUP STUDIO</span>
             </div>
         </div>
-        <div class="badge">UK Certified Professional Stylist</div>
-        <p style="color: rgba(255,255,255,0.9);">Ladies Beauty Parlour & Cosmetology Center</p>
+
+        <p style="color: rgba(255,255,255,0.9); font-weight: 300; letter-spacing: 1px;">
+            Ladies Beauty Parlour & Cosmetology Center
+        </p>
+
         <div>
             <i class="fa-solid fa-location-dot" style="color:white"></i>
-            <a href=https://maps.app.goo.gl/HwjWVgkVZcGkb3rh6 class="location-link" target="_blank">
+            <a href="https://maps.app.goo.gl/HwjWVgkVZcGkb3rh6" class="location-link" target="_blank">
                 Kurissumoodu, Changanacherry
             </a>
         </div>
     </header>
 
-    <h2 class="section-title">Contact us</h2>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="services.html" class="nav-link">SERVICES</a>
+        <a href="#about" class="nav-link">ABOUT US</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <h2 class="section-title" id="contact">Contact us</h2>
     <div class="links-wrapper">
         <a href="https://wa.me/918921225353" class="link-btn btn-whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp" style="color:#25D366"></i> Chat on WhatsApp
@@ -135,13 +328,23 @@
 
     <h2 class="section-title">Our Services</h2>
     <div class="image-stack">
-        <div class="service-card"><img src="hydrafacial.png" alt="Hydra Facial"><div class="service-name">Hydra Facial</div></div>
-        <div class="service-card"><img src="haircoloring.png" alt="Hair Coloring"><div class="service-name">Hair Coloring</div></div>
-        <div class="service-card"><img src="hairsmoothening.png" alt="Hair Smoothening"><div class="service-name">Hair Smoothening</div></div>
-        <div class="service-card"><img src="eyebrow.png" alt="Eyebrow Styling"><div class="service-name">Eyebrow Styling</div></div>
-        <div class="service-card"><img src="pedicure.png" alt="Pedicure and Manicure"><div class="service-name">Pedicure and Manicure</div></div>
+        <div class="service-card"><img src="hydrafacial.png" alt="Hydra Facial">
+            <div class="service-name">Hydra Facial</div>
+        </div>
+        <div class="service-card"><img src="haircoloring.png" alt="Hair Coloring">
+            <div class="service-name">Hair Coloring</div>
+        </div>
+        <div class="service-card"><img src="hairsmoothening.png" alt="Hair Smoothening">
+            <div class="service-name">Hair Smoothening</div>
+        </div>
+        <div class="service-card"><img src="eyebrow.png" alt="Eyebrow Styling">
+            <div class="service-name">Eyebrow Styling</div>
+        </div>
+        <div class="service-card"><img src="pedicure.png" alt="Pedicure and Manicure">
+            <div class="service-name">Pedicure and Manicure</div>
+        </div>
     </div>
-    
+
     <h2 class="section-title">Reach us</h2>
     <div class="links-wrapper">
         <a href="https://www.instagram.com/herasglam" class="link-btn btn-insta" target="_blank">
@@ -181,28 +384,29 @@
     <h2 class="section-title">Client Reviews</h2>
     <div class="card" style="text-align: center;">
         <div style="color: #fbbc04; font-size: 1.3rem; margin-bottom: 10px;">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <p style="color: #444; font-style: italic; line-height: 1.6;">
             "Professional service and amazing results. The best makeup studio in Changanacherry!"
         </p>
-        <a href="https://search.google.com/local/writereview?placeid=ChIJGyH__VslBjsRgeV3Gm2H6iQ" target="_blank" style="color: var(--accent-blue); font-weight: bold; text-decoration: none;">Write a Review on Google</a>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJGyH__VslBjsRgeV3Gm2H6iQ" target="_blank"
+            style="color: var(--accent-blue); font-weight: bold; text-decoration: none;">Write a Review on Google</a>
     </div>
 
     <h2 class="section-title">Find Our Studio</h2>
     <div style="max-width: 500px; margin: 0 auto 40px; padding: 0 20px;">
-        <iframe 
-            class="map-frame"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4934.821332134103!2d76.55282877589744!3d9.46005978209075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06255bfdff211b%3A0x24ea876d1a77e581!2sHera&#39;s%20Glam%20Makeup%20Studio!5e1!3m2!1sen!2sus!4v1769361577139!5m2!1sen!2sus"
+        <iframe class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4934.821332134103!2d76.55282877589744!3d9.46005978209075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06255bfdff211b%3A0x24ea876d1a77e581!2sHera's%20Glam%20Makeup%20Studio!5e1!3m2!1sen!2sus!4v1769361577139!5m2!1sen!2sus"
             allowfullscreen="" loading="lazy">
         </iframe>
     </div>
 
-    <div class="card" style="margin-bottom: 50px; background: #f0f7ff; border-color: #d0e4ff;">
+    <div class="card" id="about" style="margin-bottom: 50px; background: #f0f7ff; border-color: #d0e4ff;">
         <h3 style="font-family: 'Cinzel', serif; color: var(--deep-blue); margin-top: 0;">Our Expertise</h3>
         <p style="line-height: 1.7; color: #333;">
-            <strong>HΣRΛ'S GLΛM</strong> is a premier ladies beauty destination in Changanacherry. 
-            Led by a <strong>UK Certified Professional</strong> in Cosmetology. 
+            <strong>HΣRΛ'S GLΛM</strong> is a premier ladies beauty destination in Changanacherry.
+            Led by a <strong>UK Certified Professional</strong> in Cosmetology.
             Bridal artistry refined through professional training at <strong>Face Palette, Kochi</strong>.
         </p>
     </div>
@@ -212,4 +416,5 @@
     </footer>
 
 </body>
+
 </html>

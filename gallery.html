@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | HΣRΛ'S GLΛM Makeup Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --accent-blue: #006aff;
+            --deep-blue: #021B79;
+            --accent-gradient: radial-gradient(circle at top, #0575E6, #021B79);
+            --border-color: #eeeeee;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        header {
+            padding: 40px 20px 30px;
+            background: var(--accent-gradient);
+            color: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--deep-blue);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--deep-blue);
+            margin: 50px 0 25px;
+            font-size: 1.6rem;
+            border-bottom: 2.5px solid var(--accent-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* --- GALLERY GRID --- */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 50px;
+            background: #f8f9fa;
+            color: #888;
+            border-top: 1px solid #eee;
+        }
+
+        .max-efex {
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HΣRΛ'S GLΛM</h1>
+        <p style="margin-top: 10px;">Bridal & Cosmetology Portfolio</p>
+    </header>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="services.html" class="nav-link">SERVICES</a>
+        <a href="gallery.html" class="nav-link">GALLERY</a>
+        <a href="index.html#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <div class="container">
+
+        <h2 class="section-title">Studio Work Portfolio</h2>
+        <div class="photo-grid">
+            <div class="gallery-item"><img src="gallery/h1.jpg" alt="Studio Image 1"></div>
+            <div class="gallery-item"><img src="gallery/h2.jpg" alt="Studio Image 2"></div>
+            <div class="gallery-item"><img src="gallery/h3.jpg" alt="Studio Image 3"></div>
+            <div class="gallery-item"><img src="gallery/h4.jpg" alt="Studio Image 4"></div>
+            <div class="gallery-item"><img src="gallery/h5.jpg" alt="Studio Image 5"></div>
+            <div class="gallery-item"><img src="gallery/h6.jpg" alt="Studio Image 6"></div>
+            <div class="gallery-item"><img src="gallery/h7.jpg" alt="Studio Image 7"></div>
+            <div class="gallery-item"><img src="gallery/h8.jpg" alt="Studio Image 8"></div>
+            <div class="gallery-item"><img src="gallery/h9.jpg" alt="Studio Image 9"></div>
+            <div class="gallery-item"><img src="gallery/h10.jpg" alt="Studio Image 10"></div>
+            <div class="gallery-item"><img src="gallery/h11.jpg" alt="Studio Image 11"></div>
+            <div class="gallery-item"><img src="gallery/hg12.jpeg" alt="Studio Image 12"></div>
+            <div class="gallery-item"><img src="gallery/hg13.jpeg" alt="Studio Image 13"></div>
+            <div class="gallery-item"><img src="gallery/hg14.jpeg" alt="Studio Image 14"></div>
+            <div class="gallery-item"><img src="gallery/hg15.jpeg" alt="Studio Image 15"></div>
+            <div class="gallery-item"><img src="gallery/hg16.jpeg" alt="Studio Image 16"></div>
+            <div class="gallery-item"><img src="gallery/hg17.jpeg" alt="Studio Image 17"></div>
+            <div class="gallery-item"><img src="gallery/hg18.jpeg" alt="Studio Image 18"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>HΣRΛ'S GLΛM 2026 | Portfolio Managed by <span class="max-efex">MAX EFEX</span></p>
+    </footer>
+
+</body>
+
+</html>
