@@ -1,423 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HΣRΛ'S GLΛM | Makeup Studio & Cosmetology</title>
-
+    <title>Hera's Glam | Premium Beauty Salon, Bridal Makeup & Skin Care</title>
+    <meta name="description" content="Hera's Glam is a premium ladies beauty salon and makeup studio in Kurissumoodu, Changanacherry offering bridal makeup, hair care, skin treatments, facials, and salon services.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        /* --- SAPPHIRE BLUE & WHITE THEME --- */
-        :root {
-            --bg-color: #ffffff;
-            --card-bg: #fcfcfc;
-            --accent-blue: #006aff;
-            --deep-blue: #021B79;
-            --accent-gradient: radial-gradient(circle at top, #0575E6, #021B79);
-            --text-dark: #1a1a1a;
-            --border-color: #eeeeee;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .logo-img {
-            height: 90px;
-            width: auto;
-            margin: 0 auto;
-        }
-
-        header {
-            padding: 50px 20px 30px;
-            background: var(--accent-gradient);
-            border-bottom: 1px solid var(--border-color);
-            color: white;
-        }
-
-        .brand-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        h1 {
-            margin: 0;
-            font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 5px;
-            color: rgba(255, 255, 255, 0.9);
-            text-transform: uppercase;
-        }
-
-        /* --- NAVIGATION MENU --- */
-        .nav-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 15px;
-            background: #fff;
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--deep-blue);
-            font-family: 'Cinzel', serif;
-            font-weight: bold;
-            font-size: 0.85rem;
-            padding: 5px 10px;
-            transition: 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-blue);
-        }
-
-        .badge {
-            display: inline-block;
-            border: 1.5px solid #ffffff;
-            color: #ffffff;
-            padding: 8px 22px;
-            font-size: 0.8rem;
-            border-radius: 50px;
-            margin: 20px 0;
-            font-weight: bold;
-            font-family: 'Cinzel', serif;
-        }
-
-        .location-link {
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 1px dotted #fff;
-            font-size: 0.95rem;
-            margin-top: 10px;
-            display: inline-block;
-        }
-
-        /* --- ACTION BUTTONS --- */
-        .links-wrapper {
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px;
-            background: #fff;
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            transition: all 0.2s ease;
-        }
-
-        .link-btn:hover {
-            transform: translateY(-3px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 5px 15px rgba(0, 106, 255, 0.1);
-        }
-
-        .btn-whatsapp {
-            border-left: 6px solid #25D366;
-        }
-
-        .btn-call {
-            border-left: 6px solid #FFD700;
-        }
-
-        .btn-insta {
-            border-left: 6px solid #E1306C;
-        }
-
-        .btn-fb {
-            border-left: 6px solid #1877F2;
-        }
-
-        .btn-email {
-            border-left: 6px solid #EA4335;
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            color: var(--deep-blue);
-            margin: 50px 0 25px;
-            font-size: 1.6rem;
-        }
-
-        .card {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 25px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            border: 1px solid #eee;
-            text-align: left;
-        }
-
-        .image-stack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .service-card {
-            width: 100%;
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-        }
-
-        .service-name {
-            padding: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--accent-blue);
-            letter-spacing: 1px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            margin-bottom: 5px;
-            color: #555;
-            font-weight: 700;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
-        .btn-quote {
-            width: 100%;
-            background: var(--accent-blue);
-            color: white;
-            border: none;
-            padding: 16px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .map-frame {
-            width: 100%;
-            height: 320px;
-            border-radius: 15px;
-            border: 1px solid var(--accent-blue);
-        }
-
-        footer {
-            padding: 50px 20px;
-            background: #f8f9fa;
-            border-top: 1px solid #eee;
-            color: #888;
-            font-size: 0.85rem;
-        }
-
-        .max-efex {
-            color: var(--accent-blue);
-            font-weight: 800;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <header>
-        <div class="brand-container">
-            <img src="heraslogo.png" alt="Hera's Glam Logo" class="logo-img">
-
-            <div class="brand-text">
-                <h1>HΣRΛ'S GLΛM</h1>
-                <span class="subtitle">MAKEUP STUDIO</span>
-            </div>
-        </div>
-
-        <p style="color: rgba(255,255,255,0.9); font-weight: 300; letter-spacing: 1px;">
-            Ladies Beauty Parlour & Cosmetology Center
-        </p>
-
-        <div>
-            <i class="fa-solid fa-location-dot" style="color:white"></i>
-            <a href="https://maps.app.goo.gl/HwjWVgkVZcGkb3rh6" class="location-link" target="_blank">
-                Kurissumoodu, Changanacherry
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index - Copy.html">
+                <img src="heraslogo.png" alt="Hera's Glam logo">
+                <div>
+                    <div class="brand-title">Hera's Glam</div>
+                    <div class="brand-subtitle">Makeup Studio & Salon</div>
+                </div>
             </a>
+            <nav class="nav">
+                <a href="index - Copy.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html" class="btn-nav">Book Visit</a>
+            </nav>
         </div>
     </header>
 
-    <nav class="nav-bar">
-        <a href="index.html" class="nav-link">HOME</a>
-        <a href="services.html" class="nav-link">SERVICES</a>
-        <a href="services.html" class="nav-link">GALLERY</a>
-        <a href="#about" class="nav-link">ABOUT US</a>
-        <a href="#contact" class="nav-link">CONTACT</a>
-    </nav>
-
-    <h2 class="section-title" id="contact">Contact us</h2>
-    <div class="links-wrapper">
-        <a href="https://wa.me/918921225353" class="link-btn btn-whatsapp" target="_blank">
-            <i class="fa-brands fa-whatsapp" style="color:#25D366"></i> Chat on WhatsApp
-        </a>
-        <a href="tel:+919747699196" class="link-btn btn-call">
-            <i class="fa-solid fa-phone" style="color:#FFD700"></i> Call: +91 97476 99196
-        </a>
-        <a href="tel:+919961699196" class="link-btn btn-call">
-            <i class="fa-solid fa-phone" style="color:#FFD700"></i> Call: +91 99616 99196
-        </a>
-    </div>
-
-    <h2 class="section-title">Bridal Makeup</h2>
-    <div class="image-stack">
-        <div class="service-card"><img src="hg1.png" alt="Bridal 1"></div>
-        <div class="service-card"><img src="hg2.png" alt="Bridal 2"></div>
-        <div class="service-card"><img src="hg3.png" alt="Bridal 3"></div>
-    </div>
-
-    <h2 class="section-title">Our Services</h2>
-    <div class="image-stack">
-        <div class="service-card"><img src="hydrafacial.png" alt="Hydra Facial">
-            <div class="service-name">Hydra Facial</div>
-        </div>
-        <div class="service-card"><img src="haircoloring.png" alt="Hair Coloring">
-            <div class="service-name">Hair Coloring</div>
-        </div>
-        <div class="service-card"><img src="hairsmoothening.png" alt="Hair Smoothening">
-            <div class="service-name">Hair Smoothening</div>
-        </div>
-        <div class="service-card"><img src="eyebrow.png" alt="Eyebrow Styling">
-            <div class="service-name">Eyebrow Styling</div>
-        </div>
-        <div class="service-card"><img src="pedicure.png" alt="Pedicure and Manicure">
-            <div class="service-name">Pedicure and Manicure</div>
-        </div>
-    </div>
-
-    <h2 class="section-title">Reach us</h2>
-    <div class="links-wrapper">
-        <a href="https://www.instagram.com/herasglam" class="link-btn btn-insta" target="_blank">
-            <i class="fa-brands fa-instagram" style="color:#E1306C"></i> Instagram: Heras Glam
-        </a>
-        <a href="https://www.facebook.com/share/1DLhDHADzj/" class="link-btn btn-fb" target="_blank">
-            <i class="fa-brands fa-facebook-f" style="color:#1877F2"></i> Facebook: Hera's Glam
-        </a>
-        <a href="mailto:herasglam@gmail.com" class="link-btn btn-email">
-            <i class="fa-solid fa-envelope" style="color:#EA4335"></i> Email Us
-        </a>
-    </div>
-
-    <h2 class="section-title">Get a Quote</h2>
-    <div class="card">
-        <form action="https://wa.me/918921225353" method="get" target="_blank">
-            <div class="form-group">
-                <label>Occasion / Service</label>
-                <select class="form-input" name="text" required>
-                    <option value="">-- Select --</option>
-                    <option value="I need a quote for HD Bridal Makeup">HD Bridal Makeup</option>
-                    <option value="I need a quote for Engagement Makeup">Engagement Makeup</option>
-                    <option value="I need a quote for Guest Look Makeup">Guest Look Makeup</option>
-                    <option value="I need a quote for Saree Wrapping">Saree Wrapping</option>
-                    <option value="I need a quote for Hydra Facial">Hydra Facial</option>
-                    <option value="I need a quote for Treatment Based Facial">Treatment Based Facial</option>
-                    <option value="I need a quote for Pedicure and Manicure">Pedicure and Manicure</option>
-                    <option value="I need a quote for Hair Treatment">Hair Treatment</option>
-                    <option value="I need a quote for Hair Cutting">Hair Cutting</option>
-                    <option value="I need a quote for Hair Coloring">Hair Coloring</option>
-                </select>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="panel hero-copy">
+                        <div class="eyebrow">Premium Salon Experience</div>
+                        <h1 class="hero-title">Elegant Beauty Care <span>Hair, Skin & Bridal Expertise</span></h1>
+                        <p class="lead">
+                            Hera's Glam offers a refined salon experience for women who want expert beauty care,
+                            confident bridal preparation, healthier hair, and more radiant skin with professional attention.
+                        </p>
+                        <div class="hero-actions" style="margin-top: 28px;">
+                            <a class="btn btn-primary" href="https://wa.me/918921225353" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i>Services Enquiry</a>
+                            <a class="btn btn-secondary" href="contact.html"><i class="fas fa-calendar-check"></i>View Contact Page</a>
+                        </div>
+                        <div class="micro-links" style="margin-top: 22px;">
+                            <a class="micro-link whatsapp" href="https://wa.me/918921225353" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i>WhatsApp: +91 89212 25353</a>
+                            <a class="micro-link" href="tel:+919747699196"><i class="fas fa-phone"></i>Call: +91 97476 99196</a>
+                            <a class="micro-link" href="tel:+919961699196"><i class="fas fa-headset"></i>Help / Complaint: +91 99616 99196</a>
+                            <a class="micro-link" href="https://maps.app.goo.gl/HwjWVgkVZcGkb3rh6" target="_blank" rel="noreferrer"><i class="fas fa-location-dot"></i>Kurissumoodu</a>
+                            <a class="micro-link review" href="https://search.google.com/local/writereview?placeid=ChIJGyH__VslBjsRgeV3Gm2H6iQ" target="_blank" rel="noreferrer"><i class="fas fa-star"></i>Google Review</a>
+                        </div>
+                    </div>
+                    <div class="hero-media panel" style="padding: 0;">
+                        <img src="hg1.png" alt="Hera's Glam bridal beauty showcase">
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn-quote">Request Price via WhatsApp</button>
-        </form>
-    </div>
+        </section>
 
-    <h2 class="section-title">Client Reviews</h2>
-    <div class="card" style="text-align: center;">
-        <div style="color: #fbbc04; font-size: 1.3rem; margin-bottom: 10px;">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                class="fas fa-star"></i><i class="fas fa-star"></i>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Why Choose A Salon</div>
+                        <h2 class="section-title">Professional salon care is not luxury alone. It is beauty maintenance with expert guidance.</h2>
+                    </div>
+                    <p class="section-copy">
+                        Regular salon care helps maintain hygiene, presentation, and long-term beauty health. Professional service
+                        protects the hair and skin from avoidable damage caused by unsuitable home methods and inconsistent care.
+                    </p>
+                </div>
+                <div class="cards-grid">
+                    <div class="feature-card">
+                        <strong>Healthy hair management</strong>
+                        <p>Professional hair care helps reduce dryness, roughness, breakage, and chemical damage while preserving shine and strength.</p>
+                    </div>
+                    <div class="feature-card">
+                        <strong>Skin treatment with purpose</strong>
+                        <p>Facials and treatment-based skin care support deep cleansing, hydration, texture improvement, and healthier-looking skin.</p>
+                    </div>
+                    <div class="feature-card">
+                        <strong>Better grooming confidence</strong>
+                        <p>Well-maintained hair, brows, nails, and skin improve personal presentation for work, events, and daily confidence.</p>
+                    </div>
+                    <div class="feature-card">
+                        <strong>Event-ready beauty</strong>
+                        <p>Professional preparation for weddings and special functions gives a polished finish that lasts better in photos and real life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Signature Services</div>
+                        <h2 class="section-title">Curated salon services for bridal beauty, skin care, and complete grooming.</h2>
+                    </div>
+                    <p class="section-copy">
+                        Each service is delivered with attention to comfort, hygiene, finish, and suitability for the client's face, skin, hair type, and occasion.
+                    </p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-crown"></i></div>
+                        <h3 class="card-title">Bridal Makeup</h3>
+                        <p>Elegant bridal looks planned for engagement, wedding, reception, and festive functions with a balanced premium finish.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-spa"></i></div>
+                        <h3 class="card-title">Skin Treatments</h3>
+                        <p>Hydra facial, glow-focused clean-up, and treatment-driven care that helps maintain clarity, softness, and a fresh complexion.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-wind"></i></div>
+                        <h3 class="card-title">Hair Care</h3>
+                        <p>Hair smoothening, hair coloring, repair support, and grooming solutions designed to improve texture and manageability.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-eye"></i></div>
+                        <h3 class="card-title">Brow & Face Finishing</h3>
+                        <p>Eyebrow styling and facial grooming help define expression and complete a cleaner, more refined appearance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
+                        <h3 class="card-title">Hand & Foot Care</h3>
+                        <p>Pedicure and manicure services improve comfort, grooming quality, and polished presentation for both daily care and events.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-user-check"></i></div>
+                        <h3 class="card-title">Personal Beauty Guidance</h3>
+                        <p>Service selection and treatment planning based on occasion, skin concerns, hair condition, and beauty goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="split-grid">
+                    <div class="media-frame panel" style="padding: 0;">
+                        <img src="hydrafacial.png" alt="Premium skin treatment at Hera's Glam">
+                    </div>
+                    <div class="panel">
+                        <div class="eyebrow">About The Studio</div>
+                        <h2 class="section-title">A salon designed for women who want refined service, not rushed service.</h2>
+                        <p class="section-copy" style="max-width: none;">
+                            Hera's Glam is a women's beauty destination in Kurissumoodu, Changanacherry focused on bridal elegance,
+                            salon care, skin treatments, and hair services delivered in a professional, welcoming environment.
+                        </p>
+                        <ul class="clean-list" style="margin-top: 20px;">
+                            <li><i class="fas fa-check-circle"></i><span>UK Certified Professional Stylist with cosmetology-focused expertise.</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Bridal artistry refined through professional training at Face Palette, Kochi.</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Beauty services planned for comfort, camera-ready finish, and long-lasting confidence.</span></li>
+                        </ul>
+                        <div class="hero-actions" style="margin-top: 24px;">
+                            <a class="btn btn-primary" href="about.html">Read Full About</a>
+                            <a class="btn btn-secondary" href="services.html">Explore Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Beauty Gallery</div>
+                        <h2 class="section-title">Selected looks and service visuals from Hera's Glam.</h2>
+                    </div>
+                    <p class="section-copy">A glimpse of bridal beauty, facial care, grooming, and salon artistry delivered with a premium touch.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-card"><img src="gallery/h1.jpg" alt="Salon work gallery image 1"></div>
+                    <div class="gallery-card"><img src="gallery/h2.jpg" alt="Salon work gallery image 2"></div>
+                    <div class="gallery-card"><img src="gallery/h3.jpg" alt="Salon work gallery image 3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="split-grid">
+                    <div class="panel">
+                        <div class="eyebrow">Visit The Studio</div>
+                        <h2 class="section-title">Easy studio access for bridal consultation, salon visits, and treatment appointments.</h2>
+                        <p class="section-copy" style="max-width: none;">
+                            Hera's Glam is located in Kurissumoodu, Changanacherry. Clients can use the map below to find the studio easily for service appointments,
+                            bridal discussions, and direct beauty consultations.
+                        </p>
+                        <div class="hero-actions" style="margin-top: 24px;">
+                            <a class="btn btn-primary" href="https://wa.me/918921225353?text=Hello%20Hera%27s%20Glam%2C%20I%20need%20a%20services%20enquiry." target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i>Services Enquiry</a>
+                            <a class="btn btn-secondary" href="https://maps.app.goo.gl/HwjWVgkVZcGkb3rh6" target="_blank" rel="noreferrer"><i class="fas fa-location-dot"></i>Open In Maps</a>
+                        </div>
+                    </div>
+                    <div class="panel" style="padding: 0;">
+                        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4934.821332134103!2d76.55282877589744!3d9.46005978209075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06255bfdff211b%3A0x24ea876d1a77e581!2sHera&#39;s%20Glam%20Makeup%20Studio!5e1!3m2!1sen!2sus!4v1769361577139!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-panel">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-title" style="font-size: 2rem; margin-bottom: 10px;">Hera's Glam</div>
+                        <p>Premium ladies salon, makeup studio, and cosmetology-focused beauty space in Changanacherry.</p>
+                        <div class="copyright">&copy; 2026 Hera's Glam | Powered by MAX EFEX</div>
+                    </div>
+                    <div>
+                        <div class="footer-title" style="font-size: 1.35rem; margin-bottom: 12px;">Pages</div>
+                        <div class="footer-links">
+                            <a href="about.html">About</a>
+                            <a href="services.html">Services</a>
+                            <a href="treatments.html">Treatments</a>
+                            <a href="gallery.html">Gallery</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-title" style="font-size: 1.35rem; margin-bottom: 12px;">Connect</div>
+                        <div class="footer-links">
+                            <a href="https://wa.me/918921225353" target="_blank" rel="noreferrer">WhatsApp Enquiry: +91 89212 25353</a>
+                            <a href="tel:+919961699196">Help / Complaint: +91 99616 99196</a>
+                            <a href="https://www.instagram.com/herasglam" target="_blank" rel="noreferrer">Instagram</a>
+                            <a href="https://www.facebook.com/share/1DLhDHADzj/" target="_blank" rel="noreferrer">Facebook</a>
+                            <a href="https://search.google.com/local/writereview?placeid=ChIJGyH__VslBjsRgeV3Gm2H6iQ" target="_blank" rel="noreferrer">Write a Google Review</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p style="color: #444; font-style: italic; line-height: 1.6;">
-            "Professional service and amazing results. The best makeup studio in Changanacherry!"
-        </p>
-        <a href="https://search.google.com/local/writereview?placeid=ChIJGyH__VslBjsRgeV3Gm2H6iQ" target="_blank"
-            style="color: var(--accent-blue); font-weight: bold; text-decoration: none;">Write a Review on Google</a>
-    </div>
-
-    <h2 class="section-title">Find Our Studio</h2>
-    <div style="max-width: 500px; margin: 0 auto 40px; padding: 0 20px;">
-        <iframe class="map-frame"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4934.821332134103!2d76.55282877589744!3d9.46005978209075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06255bfdff211b%3A0x24ea876d1a77e581!2sHera's%20Glam%20Makeup%20Studio!5e1!3m2!1sen!2sus!4v1769361577139!5m2!1sen!2sus"
-            allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
-
-    <div class="card" id="about" style="margin-bottom: 50px; background: #fffaff; border-left: 5px solid var(--deep-blue); border-radius: 15px;">
-        <h3 style="font-family: 'Cinzel', serif; color: var(--deep-blue); margin-top: 0;">The Goddess of Marriage</h3>
-        <p style="line-height: 1.8; color: #333; font-size: 1rem;">
-            In Greek heritage, <strong>Hera</strong> is the revered Goddess of Marriage and the Protector of Women. We chose this name because we believe every bride deserves to radiate the grace and majesty of a queen on her union day.
-            <br><br>
-            <strong>HΣRΛ'S GLΛM</strong> is a specialized bridal studio in Changanacherry led by a <strong>UK Certified Professional</strong>. Our artistry is further refined at <strong>Face Palette, Kochi</strong>, ensuring your bridal look is high-definition, timeless, and divine.
-        </p>
-    </div>
-
-    <footer>
-        <p>HΣRΛ'S GLΛM 2026 | Powered By <span class="max-efex">MAX EFEX</span></p>
     </footer>
-
 </body>
-
-
 </html>
-
