@@ -32,7 +32,7 @@ This project is a high-end, responsive business website developed for **Hera's G
 *Creative Web & Software Solutions*
 * **Lead Developer:** Aneesh (Max Efex)
 * **Portfolio:** [maxefex.in](https://maxefex.in)
-* **Contact:** info@maxefex.in
+* **Contact:** mediamaxefex@gmail.com
 
 ---
 *© 2026 Hera's Glam. Powered by MAX EFEX.*
